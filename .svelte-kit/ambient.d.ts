@@ -62,6 +62,7 @@ declare module '$env/static/private' {
 	export const LSCOLORS: string;
 	export const PATH: string;
 	export const npm_package_json: string;
+	export const npm_config_engine_strict: string;
 	export const _: string;
 	export const npm_config_userconfig: string;
 	export const npm_config_init_module: string;
@@ -71,11 +72,13 @@ declare module '$env/static/private' {
 	export const PWD: string;
 	export const npm_lifecycle_event: string;
 	export const EDITOR: string;
+	export const npm_package_name: string;
 	export const LANG: string;
 	export const npm_config_npm_version: string;
 	export const XPC_FLAGS: string;
 	export const npm_config_node_gyp: string;
 	export const RBENV_SHELL: string;
+	export const npm_package_version: string;
 	export const XPC_SERVICE_NAME: string;
 	export const VSCODE_INJECTION: string;
 	export const SHLVL: string;
@@ -161,6 +164,7 @@ declare module '$env/dynamic/private' {
 		LSCOLORS: string;
 		PATH: string;
 		npm_package_json: string;
+		npm_config_engine_strict: string;
 		_: string;
 		npm_config_userconfig: string;
 		npm_config_init_module: string;
@@ -170,11 +174,13 @@ declare module '$env/dynamic/private' {
 		PWD: string;
 		npm_lifecycle_event: string;
 		EDITOR: string;
+		npm_package_name: string;
 		LANG: string;
 		npm_config_npm_version: string;
 		XPC_FLAGS: string;
 		npm_config_node_gyp: string;
 		RBENV_SHELL: string;
+		npm_package_version: string;
 		XPC_SERVICE_NAME: string;
 		VSCODE_INJECTION: string;
 		SHLVL: string;
