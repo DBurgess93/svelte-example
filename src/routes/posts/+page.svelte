@@ -1,7 +1,7 @@
 <script>
 	import { onDestroy, onMount } from 'svelte';
-	onMount(() => console.log('Mounted home page'));
-	onDestroy(() => console.log('Unmounted home page'));
+	onMount(() => console.log('Mounted posts page'));
+	onDestroy(() => console.log('Unmounted posts page'));
 </script>
 
 <nav>
@@ -11,10 +11,10 @@
 	</ul>
 </nav>
 
-<h1>Home Page</h1>
+<h1>Post Page</h1>
 
 <style>
 	h1 {
-		color: #ffffff;
+		color: #a13434;
 	}
 </style>
