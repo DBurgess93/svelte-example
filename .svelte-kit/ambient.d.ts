@@ -26,6 +26,7 @@
  * ```
  */
 declare module '$env/static/private' {
+	export const DATABASE_URL: string;
 	export const NVM_INC: string;
 	export const MANPATH: string;
 	export const TERM_PROGRAM: string;
@@ -128,6 +129,7 @@ declare module '$env/static/public' {
  */
 declare module '$env/dynamic/private' {
 	export const env: {
+		DATABASE_URL: string;
 		NVM_INC: string;
 		MANPATH: string;
 		TERM_PROGRAM: string;
