@@ -12,9 +12,14 @@
 {#await getPosts()}
 	<p>Loading...</p>
 {:then posts}
-	<pre>
-  {JSON.stringify(posts, null, 2)}
-</pre>
+	<p>Showing {posts.length} posts</p>
+	{#each posts as { slug, title }}
+		<ul>
+			<li>
+				<a href="/posts/{slug}">{title}</a>
+			</li>
+		</ul>
+	{/each}
 {:catch errror}
 	<p>{error.message}</p>
 {/await}
