@@ -1,15 +1,15 @@
+import { json } from '@sveltejs/kit';
 import type { RequestHandler } from './$types';
 
 import db from '$lib/database';
-import { json } from '@sveltejs/kit';
 
-export const GET: RequestHandler = async (event) => {
+export const GET: RequestHandler = async ({ url }) => {
+	const limit = Number(url.searchParams.get('limit') ?? 30);
+	const order = url.searchParams.get('order' ?? 'asc');
+
 	const posts = await db.post.findMany({
-		take: Math.round(Math.random() * 30)
-	});
-
-	event.setHeaders({
-		'Cache-Control': 'max-age=60'
+		orderBy: { id: order },
+		take: limit
 	});
 	return json(posts);
 };
